@@ -1,3 +1,5 @@
+[![Tests](https://github.com/bushesarebetter/fourier-epicycles/actions/workflows/tests.yml/badge.svg)](https://github.com/bushesarebetter/fourier-epicycles/actions/workflows/tests.yml)
+
 # fourier-epicycles
 
 Draws a closed 2D path with a chain of rotating circles. The path is treated as complex samples, run through a hand-written DFT, and the biggest terms become the circles.
