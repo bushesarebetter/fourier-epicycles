@@ -1,20 +1,24 @@
+# Fourier epicycles
+
 [![Tests](https://github.com/bushesarebetter/fourier-epicycles/actions/workflows/tests.yml/badge.svg)](https://github.com/bushesarebetter/fourier-epicycles/actions/workflows/tests.yml)
 
-# fourier-epicycles
-
 Draws a closed 2D path with a chain of rotating circles. The path is treated as complex samples, run through a hand-written DFT, and the biggest terms become the circles.
+
+[Preview](#preview) · [Setup](#setup) · [Run](#run) · [Tests](#tests)
+
+## Preview
 
 ![star drawn with 30 circles](demo.gif)
 
 ## Setup
 
-```
+```bash
 pip install -r requirements.txt
 ```
 
 ## Run
 
-```
+```bash
 python epicycles.py                                   # heart, 50 circles -> epicycles.gif
 python epicycles.py --shape star --circles 30 --out demo.gif
 python epicycles.py --image logo.png --circles 150    # trace the edges of an image
@@ -25,9 +29,15 @@ Built-in shapes are `heart`, `star`, `square` and `infinity`. For images, edge p
 
 The script prints the RMS reconstruction error for the chosen number of circles.
 
-## Test
+## Tests
 
+Install pytest separately from the runtime dependencies:
+
+```bash
+pip install pytest
 ```
+
+```bash
 python -m pytest -q
 ```
 
